@@ -17,7 +17,7 @@ You can install the development version of dtheory from
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("tclark23/dtheory")
+devtools::install_github("t-clark04/dtheory")
 ```
 
 ## Usage
