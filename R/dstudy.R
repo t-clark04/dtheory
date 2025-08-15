@@ -7,7 +7,7 @@
 #' @param by The interval at which trial numbers should be tested.
 #' @param rounded The number of decimal places the reliability coefficients should be rounded to. 3 by default.
 #'
-#' @return A data frame of G-coefficients (absolute agreement) for the specified numbers of trials.
+#' @return One data frame containing the variance components from the G-study and another data frame of G-coefficients (absolute agreement) for the specified numbers of trials.
 #' @export
 #'
 #' @examples
@@ -54,7 +54,7 @@ dstudy <- function(data, col.scores, from, to, by, rounded = 3) {
 
   # Running a G-study from the gtheory package
   formula2 <- Measure ~ (1|Person) + (1|Trial)
-  comps <- data.frame(gtheory::gstudy(data = data.small, formula2)$components)
+  comps <- data.frame(gtheory::gstudy(data = data.small, formula2)$components)[, 1:3]
   y <- c("Person", "Trial", "Residual")
 
   # Putting the output into a specific format
@@ -99,5 +99,5 @@ dstudy <- function(data, col.scores, from, to, by, rounded = 3) {
     final_df <- cbind(final_df, temp)
   }
 
-  return(final_df)
+  return(list(gstudy = comps, dstudy = final_df))
 }

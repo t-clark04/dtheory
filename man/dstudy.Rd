@@ -20,7 +20,7 @@ dstudy(data, col.scores, from, to, by, rounded = 3)
 \item{rounded}{The number of decimal places the reliability coefficients should be rounded to. 3 by default.}
 }
 \value{
-A data frame of G-coefficients (absolute agreement) for the specified numbers of trials.
+One data frame containing the variance components from the G-study and another data frame of G-coefficients (absolute agreement) for the specified numbers of trials.
 }
 \description{
 Execute a D-Study
