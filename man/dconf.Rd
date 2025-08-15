@@ -13,9 +13,9 @@ dconf(data, col.scores, n, conf.level = 0.9, rounded = 3)
 
 \item{n}{The number of trials to test.}
 
-\item{conf.level}{Confidence level (in decimal form). 0.9 by default.}
+\item{conf.level}{Confidence level (in decimal form). Set to 0.9 by default.}
 
-\item{rounded}{The number of decimal places the reliability coefficients should be rounded to. 3 by default.}
+\item{rounded}{The number of decimal places the reliability coefficients should be rounded to. Set to 3 by default.}
 }
 \value{
 A data frame containing the G-coefficient (for absolute agreement), as well as the corresponding lower and upper bounds at the specified confidence level.
