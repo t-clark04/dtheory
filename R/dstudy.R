@@ -99,5 +99,5 @@ dstudy <- function(data, col.scores, from, to, by, rounded = 3) {
     final_df <- cbind(final_df, temp)
   }
 
-  return(list(gstudy = comps, dstudy = final_df))
+  return(list(gstudy = comps[, 1:3], dstudy = final_df))
 }

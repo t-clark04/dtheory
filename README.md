@@ -4,6 +4,7 @@
 # dtheory
 
 <!-- badges: start -->
+
 <!-- badges: end -->
 
 The goal of dtheory is to provide a more practical and useful set of
@@ -17,7 +18,7 @@ You can install the development version of dtheory from
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("t-clark04/dtheory")
+devtools::install_github("tclark23/dtheory")
 ```
 
 ## Usage
@@ -33,7 +34,7 @@ coefficient (typically 0.8 is set as the threshold).
 library(dtheory)
 x <- data.frame(c(1,1,1,2,2,2,3,3,3), c(1,2,3,1,2,3,1,2,3), c(12, 14, 12, 22, 22, 19, 17, 22, 20))
 colnames(x) <- c("Person", "Trial", "Metric")
-dstudy(x, col.scores = "Metric", from = 1, to = 10, by = 1)
+dstudy(x, col.scores = "Metric", from = 1, to = 10, by = 1)$dstudy
 #>        n = 1 n = 2 n = 3 n = 4 n = 5 n = 6 n = 7 n = 8 n = 9 n = 10
 #> Metric 0.844 0.915 0.942 0.956 0.964  0.97 0.974 0.977  0.98  0.982
 ```
